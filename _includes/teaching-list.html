@@ -1,0 +1,21 @@
+<div class="teaching-list">
+
+  <ul style="list-style-type:none">
+    {% for course in site.teachings %}
+      <li class="course">
+        <h4 class="course-name">
+          <a href="{{ course.url }}">
+            {{ course.title }}
+          </a>
+        </h4>
+        {% if course.description %}
+          <div class="course-description small light-font">
+            {{ course.description }}
+          </div>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+
+
+</div>
